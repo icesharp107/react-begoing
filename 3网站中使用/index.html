@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1、添加dom容器，react能替换容器任何已有内容 -->
+    <div id="like_button_container">容器</div>
+    <LikeButton>12</LikeButton>
+
+    <!-- 2、加载react 、react-dom、crossorigon属性：指明 src 属性指定的地址是支持跨域的地址-->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <!-- 加载React组件 -->
+    <script src="like_button.js"></script>
+    <!-- jsx -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</body>
+<script>
+    const e = React.createElement;
+   /*  return e(
+        'button',
+        { onClick:()=> this.setState({ liked:true}),
+        'Like'
+    ); */
+
+    return(<button>{ onClick={()=> this.setState({ liked:true})}</button>);
+</script>
+</html>
